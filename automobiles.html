@@ -314,8 +314,8 @@
         <form id="paymentForm">
             <input type="text" class="payment-input" placeholder="Cardholder Name" required>
             <input type="text" class="payment-input" id="card-number" placeholder="Card Number" required maxlength="16" oninput="this.value = this.value.replace(/[^0-9]/g, '')"> <!-- 16 digit limit -->
-            <input type="text" class="payment-input" placeholder="Expiry Date (MM/YY)" required>
-            <input type="text" class="payment-input" placeholder="CVV" required>
+            <input type="text" class="payment-input" placeholder="Expiry Date (MM/YY)" required maxlength="5" oninput="this.value = this.value.replace(/[^0-/-9]/g, '')" input type="date" input type = "year" id="Expiry Date" class="mm/yy-input" required min="" /> <!-- 4 digit limit -->
+            <input type="text" class="payment-input" placeholder="CVV" required maxlength="3"oninput="this.value = this.value.replace(/[^0-9]/g, '')"> <!-- 3 digit limit -->
             <input type="email" class="payment-input" id="email" placeholder="Email Address" required>  <!-- Email input -->
             <label for="delivery-option">Select Delivery Option:</label>
             <select id="delivery-option" class="payment-input" required onchange="toggleAddressInput()">
@@ -453,5 +453,3 @@
 
 </body>
 </html>
-
-     
